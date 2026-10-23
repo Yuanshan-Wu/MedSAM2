@@ -169,6 +169,7 @@ setup(
     license=LICENSE,
     packages=find_packages(exclude="notebooks"),
     include_package_data=True,
+    package_data={"sam2": ["configs/*.yaml", "configs/**/*.yaml"]},  # ship the Hydra configs with a non-editable install
     install_requires=REQUIRED_PACKAGES,
     extras_require=EXTRA_PACKAGES,
     python_requires=">=3.10.0",
